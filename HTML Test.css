@@ -1,0 +1,9 @@
+
+
+body {
+  background-image: url("img/CIIT\ default\ bg\ 1080.jpg");
+  background-repeat: no-repeat;
+}
+        td, th{
+            border: solid rgb(97, 22, 59) 4.5px;
+        }

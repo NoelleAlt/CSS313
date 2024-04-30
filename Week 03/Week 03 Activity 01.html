@@ -3,10 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Page</title>
+    <title>THE FLOWER CLUB</title>
     <link rel="icon" type="image/x-icon"
-    href="img/Bouquet.png">
+    href="img2/Bouquet.png">
     <style>
+            table, th, td {
+            border: 3px solid purple;
+            border-collapse: collapse;
+        }
+        table.center {
+            margin-left: auto; 
+            margin-right: auto;
+        }
+         body {
+            background-color: lightpink;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .myDiv {
+            border: 5px outset rgb(126, 12, 120);
+            background-color: lightpink;    
+            text-align: center;
+        }
         .half-width {
             width: 50%;
         }
@@ -17,50 +36,102 @@
 </head>
 <body>
     <header>
-        <h1>Title</h1>
+        <div class="myDiv">
+            <h1>WELCOME TO THE FLOWER CLUB</h1>
+        </div>
     </header>
 
 
     <nav>
         <ul>
-            <li><a href="https://example.com" target="_blank">Open in new tab</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Flower" target="_blank">These are Flowers.</a></li>
         </ul>
     </nav>
 
-
+ 
     <main>
+
+        <h1>In the Flower Club, we find all flowers valuable.</h1>
+        <h2>Do You?</h2>
+        <h3>There are flowers I personally like more though.</h3>
+        <p>(What's your favourite flower? Roses? Sampaguitas? Lillies? We don't mind what you pick, just be sure that it's a flower.)</p>
+    
         <figure>
-            <a href="image.jpg" target="_blank"><img src="image-thumbnail.jpg" alt="Click to enlarge"></a>
+            <a href="img2/Chrysanthemum_morifolium.png" target="_blank"><img src="img2/Chrysanthemum_morifolium.png"width="400" 
+                height="400"></a>
         </figure>
 
+        <p> What a beautiful flower, don't you think?</p>
+        <p> Here's some more, if you wanna see more.</p>
 
-        <table border="1">
+        <div class="row">
+            <div class="column">
+                <a href="img2/daisies.png" target="_blank"><img src="img2/daisies.png"width="200" 
+                    height="200"></a>
+            </div>
+            <div class="column">
+                <a href="img2/Bluestar.png" target="_blank"><img src="img2/Bluestar.png"width="200" 
+                    height="200"></a>
+            </div>
+            <div class="column">
+                <a href="img2/sunflower.png" target="_blank"><img src="img2/sunflower.png"width="200" 
+                    height="200"></a>
+            </div>
+          </div>
+
+        <table class="center" border="1" >
             <tr>
-                <th>Table Header 1</th>
-                <th>Table Header 2</th>
+                <th>Flowers We Accept</th>
+                <th>Flowers We Will Not</th>
             </tr>
             <tr>
-                <td>Row 1, Cell 1</td>
-                <td>Row 1, Cell 2</td>
+                <td>Lavenders</td>
+                <td>Orchids</td>
             </tr>
             <tr>
-                <td>Row 2, Cell 1</td>
-                <td>Row 2, Cell 2</td>
+                <td>Poinsettia Leaves</td>
+                <td>Bougainvillea Leaves</td>
             </tr>
         </table>
 
 
-        <p class="half-width fixed-height">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla consequat libero, nec lobortis ipsum. In nec magna posuere, aliquam dui vitae, congue libero.</p>
+        <p>Flowers are good. Leaves Are Not.</p>
 
 
-        <div>This is a div element.</div>
+        <div class="myDiv">
+            <h2>Again, welcome.</h2>
+            <p>Please do sign in if you want to talk about your favorite flowers.</p>
+            <p>But reminder,<span style="color: rgb(128, 0, 0); font-weight: bold;">NO LEAVES!</span> <span style="color: purple; font-weight: italics;">Flowers only!</span></p>
+          </div>
 
-
-        <span>This is a span element.</span>
     </main>
     
     <footer>
-        <p>Footer content here.</p>
+
+        <h2>SIGN UP HERE!</h2>
+
+        <form method="POST">
+          <label for="first_name">First Name:</label><br>
+          <input type="text" id="first_name" name="first_name" required><br>
+        
+          <label for="password">Password:</label><br>
+          <input type="password" id="password" name="password" required><br>
+        
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br>
+        
+          <label for="age">Age:</label><br>
+          <input type="number" id="age" name="age" min="0" required><br><br>
+    
+          <input type="submit" value="Submit">
+        </form> 
+
+        <!-- <script>
+            document.querySelector('form').addEventListener('submit', function() {
+              window.location.href = 'thankyou.html';
+            });
+        </script> for later -->
+          
     </footer>
 </body>
 </html>

@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noelle's Web Page</title>
+    <style>
+ body {
+        background-color: lightpink;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+    }
+
+    .half-width {
+        width: 50%;
+    }
+    .fixed-height {
+        height: 200px;
+    } 
+
+div.gallery {
+  border: 10px solid #250121;
+  width: 100%;
+}
+
+div.gallery:hover {
+  border: 10px solid #25021b;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Welcome to my Website</h2>
+            <p>Stick around if you want, I don't bite.</p>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! My name is Noelle Fontanar.</p>
+            <p>I was born at May 30, 2004.</p>
+            <p>I like to draw things, but I am taking up Computer Science.</p>
+
+            <p>These are my favorite flowers.</p>
+
+            <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="Bluestar.png">
+                    <img src="img2/Bluestar.png" alt="Bluestar" width="400" height="400">
+                  </a>
+                  <div class="desc">Bluestars</div>
+                </div>
+              </div>
+              
+              <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="Chrysanthemum.png">
+                    <img src="img2/Chrysanthemum_morifolium.png" alt="Chrysanthemum" width="400" height="400">
+                  </a>
+                  <div class="desc">Chrysanthemums</div>
+                </div>
+              </div>
+              
+              <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="orchids.png">
+                    <img src="img2/orkd.jpg" alt="Orchid" width="400" height="400">
+                  </a>
+                  <div class="desc">Orchids</div>
+                </div>
+              </div>
+              
+              <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="Lavenders">
+                    <img src="img2/lavndr.png" alt="Lavenders" width="400" height="400">
+                  </a>
+                  <div class="desc">Lavenders</div>
+                </div>
+              </div>
+
+              <div class="clearfix"></div>
+              
+              <div style="padding:6px;">
+
+
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p> This will be updated when I feel comfortable with sharing my socials.</p>
+        </section>
+    </main>
+</body>
+</html>
+

@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Showcase</title>
+    <style>
+        #changeContent {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="changeContent">Hello</div>
+    <button onclick="changeContent()">Change Content</button>
+    <button onclick="revertChange()">Revert Change</button>
+    <button onclick="changeFontStyle()">Change Font Style</button>
+    <button onclick="hideElement()">Hide Element</button>
+    <button onclick="showElement()">Show Element</button>
+    <script>
+        function changeContent() {
+            document.getElementById('changeContent').innerHTML = "HI";
+        }
+        
+        function revertChange() {
+            document.getElementById('changeContent').innerHTML = "Hello";
+        }
+
+        function changeFontStyle() {
+            document.getElementById('changeContent').style.fontStyle = "italic";
+        }
+
+        function hideElement() {
+            document.getElementById('changeContent').style.display = "none";
+        }
+
+        function showElement() {
+            document.getElementById('changeContent').style.display = "block";
+        }
+
+        console.log("Hello World");
+
+        alert("Welcome");
+
+        var x = 5;
+        var y = 3;
+        var result = Math.pow(x, y);
+        document.write("<p>x^y = " + result + "</p>");
+    </script>
+</body>
+</html>
+

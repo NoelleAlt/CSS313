@@ -10,8 +10,8 @@ body {
   p {text-align: center;}
   div {text-align: center;}
     
-  background-color: #0a2e4e; /* Dark blue background */
-  color: #ffac33; /* Orange-yellow text */
+  background-color: #0a2e4e; 
+  color: #ffac33; 
 }
 
 /* ALL TEXTBOXES */
@@ -35,7 +35,7 @@ body {
 .row a {
     margin: 10px;
     text-decoration: none;
-    color: inherit; /* Inherit text color from body */
+    color: inherit; 
 }
 
 .row a img {

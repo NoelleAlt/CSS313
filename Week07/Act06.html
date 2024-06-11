@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Simple HTML page </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $(document).ready(function(){
+                $("button").click(function(){
+                $("p").toggle();
+            });
+        });
+
+    $("h1").on({
+        mouseenter: function(){
+        $(this).css({"font-weight": "bold"});
+        }
+    });
+        $("h1").mouseleave(function(){
+            $(this).css("font-weight", "normal");
+        });
+    });
+        function changeColor() {
+          var cities = document.getElementsByClassName("city");
+          for (var i = 0; i < cities.length; i++) {
+            cities[i].style.backgroundColor = "pink";
+          }
+        }
+  </script>
+
+      </script>
+    
+    </head>
+  <body>
+    
+    <header>
+      <hgroup>
+        <h1> HTML5 AND CSS </h1>
+        <h2> A Simple HTML WITHOUT CSS</h2>
+      </hgroup>
+      <nav>
+        <ul>
+          <a href="">Home</a>
+            <a href="">Advance features</a>
+          <a href=""> About</a>
+          <a href=""> contact </a>
+          <a href=""> Sign in </a>
+          <a href=""> Sign up </a>
+          </ul>
+        </nav>
+    </header>
+    <h1>Multiple DIV Elements</h1>
+
+<div class="city">
+  <h2>London</h2>
+  <p>London is the capital city of England.</p>
+  <p>London has over 13 million inhabitants.</p>
+</div>
+
+<div class="city">
+  <h2>Oslo</h2>
+  <p>Oslo is the capital city of Norway.</p>
+  <p>Oslo has over 600.000 inhabitants.</p>
+</div>
+
+<div class="city">
+  <h2>Rome</h2>
+  <p>Rome is the capital city of Italy.</p>
+  <p>Rome has almost 3 million inhabitants.</p>
+</div>
+
+
+<button onclick="changeColor()">Change Color</button>
+
+<p id="demo">CSS styles are added to make it easier to separate the divs, and to make them more pretty</p>
+    
+    </body>
+  </html>

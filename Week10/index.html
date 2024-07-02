@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+
+  $(document).ready(function(){
+	var addEvent = function(object, type, callback) {
+	    if (object == null || typeof(object) == 'undefined') return;
+	    if (object.addEventListener) {
+	        object.addEventListener(type, callback, false);
+	    } else if (object.attachEvent) {
+	        object.attachEvent("on" + type, callback);
+	    } else {
+	        object["on"+type] = callback;
+	    }
+	};
+	function detectMouseMove() {
+		// Initial container width
+		var containerWidth = $('.container').outerWidth();
+		document.addEventListener('mousemove', function(e) {
+			$('.hover').css({
+				 left:  e.pageX
+			});
+			$('.left-side').css({
+				left: e.pageX + 75
+			});
+			var rightSideLeft = containerWidth - e.pageX;
+			$('.right-side').css({
+				right: rightSideLeft
+			});
+
+		})
+	}
+	detectMouseMove();
+	
+	
+	function detectTouch() {
+		// Initial container width
+		var containerWidth = $('.container').outerWidth();
+		document.addEventListener('mousemove', function(e) {
+			$('.hover').css({
+				 left:  e.pageX
+			});
+			$('.left-side').css({
+				left: e.pageX + 75
+			});
+			var rightSideLeft = containerWidth - e.pageX;
+			$('.right-side').css({
+				right: rightSideLeft
+			});
+		})
+	}
+	detectMouseMove();
+	
+	function touchMove(){
+		// Initial container width
+		var containerWidth = $('.container').outerWidth();
+		document.addEventListener('touchmove', function(e) {
+			$('.hover').css({
+				 left:  e.pageX
+			});
+			$('.left-side').css({
+				left: e.pageX + 75
+			});
+			var rightSideLeft = containerWidth - e.pageX;
+			$('.right-side').css({
+				right: rightSideLeft
+			});
+
+		})
+	}
+	
+	touchMove();
+	
+	function detectInput(inputType){
+		// Detect container width after resizing
+		addEvent(window, "resize", function(event) {
+			var containerWidth = $('.container').outerWidth();
+			$(document).bind(inputType, function(e){
+				$('.hover').css({
+					 left:  e.pageX
+				});
+				$('.left-side').css({
+					left: e.pageX + 75
+				});
+				var rightSideLeft = containerWidth - e.pageX;
+				$('.right-side').css({
+					right: rightSideLeft
+				});
+			});
+		});
+	}
+	
+	detectInput('mousemove');
+	detectInput('touchmove');
+	
+})();</script>
+</head>
+
+<body>
+
+
+<div id="focus-container" class="container">
+	<div class="left-side"></div>
+	<div class="right-side"></div>
+	<div class="hover">
+		<div class="tri-1">
+			<div class="bit-top"></div>
+			<div class="bit-top-left"></div>
+		</div>
+		<div class="tri-2">
+			<div class="bit-top-right"></div>
+			<div class="bit-top-right-2"></div>
+		</div>
+		
+		<div class="tri-3">
+			<div class="bit-bottom-left"></div>
+			<div class="bit-bottom-left-2"></div>
+		</div>
+		
+		<div class="tri-4">
+			<div class="bit-bottom-right"></div>
+			<div class="bit-bottom-right-2"></div>
+		</div>
+		
+	</div>
+	<p class="blur">FOCUS!!!</p>
+	<p class="focus">!!!40¢U$!!!</p>
+    </div>
+</body>
+
+</html>

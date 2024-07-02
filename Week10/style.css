@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+
+.left-side {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: #55cdf1;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.right-side {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background: #55cdf1;
+    z-index: 3;
+    overflow: hidden;
+}
+.hover {
+    position: absolute;
+    float: left;
+    height: 70px;
+    width: 70px;
+    cursor: none;
+    overflow: hidden;
+}
+
+.bit-top {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	height: 10px;
+	width: 20px;
+	background: #ff4a4a;			
+}
+
+.bit-top-left {
+	position: absolute;
+	left: 0%;
+	top: 10px;
+	height: 10px;
+	width: 10px;
+	background: #ff4a4a;			
+}
+
+
+.bit-top-right {
+	position: absolute;
+	right: 0%;
+	top: 0%;
+	height: 10px;
+	width: 20px;
+	background: #ff4a4a;
+}
+
+.bit-top-right-2 {
+	position: absolute;
+	right: 0%;
+	top: 0px;
+	height: 20px;
+	width: 10px;
+	background: #ff4a4a;
+}
+
+.bit-bottom-left {
+	position: absolute;
+	bottom: 0%;
+	left: 0px;
+	height: 20px;
+	width: 10px;
+	background: #ff4a4a;	
+}
+
+.bit-bottom-left-2 {
+	position: absolute;
+	bottom: 0%;
+	left: 0px;
+	height: 10px;
+	width: 20px;
+	background: #ff4a4a;		
+}
+
+.bit-bottom-right {
+	position: absolute;
+	bottom: 0%;
+	right: 0px;
+	height: 10px;
+	width: 20px;
+	background: #ff4a4a;			
+}
+.bit-bottom-right-2 {
+	position: absolute;
+	bottom: 0%;
+	right: 0px;
+	height: 20px;
+	width: 10px;
+	background: #ff4a4a;			
+}
+
+.blur {
+    position: absolute;
+    color: #ffffff;
+    font-family: 'Overpass', sans-serif;
+    font-size: 64px;
+    letter-spacing: 20px;
+    margin: auto;
+    width: 100%;
+    filter: blur(7px);
+    cursor: none;
+    overflow: hidden;
+    text-align: center;
+    z-index: 3;
+}
+
+.focus {
+    position: absolute;
+    color: hwb(0 100% 0%);
+    font-family: 'Overpass', sans-serif;
+    font-size: 64px;
+    letter-spacing: 20px;
+    margin: auto;
+    width: 100%;
+    filter: blur(0px);
+    cursor: none;
+    overflow: hidden;
+    text-align: center;
+    z-index: 2;
+}
+
+.container {
+	position: absolute;
+	height: 80vh;
+	padding-top: 20vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+body {
+	background: #55cdf1;
+	margin: 0;
+	padding: 0;
+	cursor: none;
+}

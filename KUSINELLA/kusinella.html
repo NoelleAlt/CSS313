@@ -8,27 +8,55 @@
 
 <h1> Kusinella </h1>
 
+
+<form id="searchForm" action="/search" method="get">
+    <input type="text" id="searchInput" name="q" placeholder="Search...">
+    <button type="submit">Search</button>
+  </form>
+
+  <script>
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      
+      let searchTerm = document.getElementById("searchInput").value;
+      
+      switch(searchTerm.toLowerCase()) {
+        case "longsilog":
+          window.location.href = "kusinella_recipe.html";
+          break;
+        case "champorado":
+          window.location.href = "kusinella_recipe.html";
+          break;
+        case "mango graham":
+          window.location.href = "kusinella_recipe.html";
+          break;
+        default:
+          window.location.href = "kusinella.html";
+      }
+    });
+    </script>
+
   <p> Breakfast </p>
 
 
 <div class="row">
-    <a href="kusinella_recipe.html"><img src="img/sinigang1.png" alt="Image 1"></a>
-    <a href="kusinella_recipe.html"><img src="img/sinigang1.png" alt="Image 1"></a>
-    <a href="kusinella_recipe.html"><img src="img/sinigang1.png" alt="Image 1"></a>
+    <a href="kusinella_recipe.html"><img src="img/Longsilog.png" alt="longsilog"></a>
+    <a href="kusinella_recipe.html"><img src="img/torta.png" alt="Tortang Talong"></a>
+    <a href="kusinella_recipe.html"><img src="img/sinangag.png" alt="Fried Rice"></a>
 </div>
     
 <p> Lunch/Dinner </p>
 
 <div class="row">
-    <a href="kusinella_recipe.html"><img src="img/sinigang1.png" alt="Image 1"></a>
-    <a href="kusinella_recipe.html"><img src="img/sinigang1.png" alt="Image 1"></a>
+    <a href="kusinella_recipe.html"><img src="img/sinigang1.png" alt="Sinigang"></a>
+    <a href="kusinella_recipe.html"><img src="img/Adobo.png" alt="Adobong Pusit"></a>
     <a href="kusinella_recipe.html"><img src="img/sinigang1.png" alt="Image 1"></a>
 </div>
 
-<p> Dessert </p>
+<p> Dessert/Snacks </p>
 
 <div class="row">
-    <a href="kusinella_recipe.html"><img src="img/sinigang1.png" alt="Image 1"></a>
+    <a href="kusinella_recipe.html"><img src="img/mango-graham.png" alt="Image 1"></a>
     <a href="kusinella_recipe.html"><img src="img/sinigang1.png" alt="Image 1"></a>
     <a href="kusinella_recipe.html"><img src="img/sinigang1.png" alt="Image 1"></a>
 </div>

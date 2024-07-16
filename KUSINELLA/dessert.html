@@ -10,6 +10,22 @@
 
   <p>What Temperature would you like?</p>
 
+  <style>
+    .enlarge {
+        transform: scale(1.2); /* Increase the size of the image */
+        transition: transform 0.3s; /* Add a smooth transition effect */
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('img').hover(function(){
+            $(this).addClass('enlarge');
+        }, function(){
+            $(this).removeClass('enlarge');
+        });
+    });
+</script>
 
 <div class="row">
     <div class="x">
@@ -25,6 +41,23 @@
 
 </div>
     
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll("*");
+    elements.forEach(element => {
+        element.style.transition = "opacity 2s";
+        element.style.opacity = 0;
+    });
+  
+    setTimeout(() => {
+        elements.forEach(element => {
+            element.style.opacity = 1;
+        });
+    }, 100);
+  });
+  </script>
+  
+
 </body>
 
 <footer>

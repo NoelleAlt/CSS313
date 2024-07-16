@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kusinella's Corned Beef Sinangag Recipe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+<body>
+
+    <header>
+        <h1> Kusinella's Corned Beef Sinangag Recipe</h1>
+    </header>
+
+    <style>
+        .enlarge {
+            transform: scale(1.2); /* Increase the size of the image */
+            transition: transform 0.3s; /* Add a smooth transition effect */
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('img').hover(function(){
+                $(this).addClass('enlarge');
+            }, function(){
+                $(this).removeClass('enlarge');
+            });
+        });
+    </script>
+    
+    <div class="row">
+        <a href="img/sinangag.png"><img src="img/sinangag.png" alt="Image 1"></a>
+        <a href="img/sinangag_cornbeef.png"><img src="img/sinangag_cornbeef.png" alt="Image 2"></a>
+        <a href="img/sinangag_cornbeef_withegg.png"><img src="img/sinangag_cornbeef_withegg.png" alt="Image 3"></a>
+    </div>
+    
+
+
+<style>
+    .change-color {
+        color: white;
+    }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('li').hover(function(){
+            $(this).addClass('change-color');
+        }, function(){
+            $(this).removeClass('change-color');
+        });
+    });
+</script>
+
+        <div class="row">
+        <div class="x">
+            <h2>Ingredients:</h2>
+            <ul>
+                <li>cooking oil</li>
+                <li>1 can of corned beef</li>
+                <li>2-3 eggs</li>
+                <li>4 cups of cold cooked rice</li>
+                <li>1 pinch of salt</li>
+                <li>1 pinch of pepper</li>
+                <li>1 small onion / ½ onion </li>
+                <li>5-7 Garlic cloves</li>
+
+            </ul>
+
+        </div>
+        <div class="x">
+            <h2>Instructions:</h2>
+            <ol>
+                <li>Fry the corned beef and set aside when crispy.</li>
+                <li>In a small bowl, beat the eggs and mix with salt and pepper.</li>
+                <li>Fry the egg mix and stir. Cut into small pieces.</li>
+                <li>Chop the onion into thin slices / rings and set aside after.</li>
+                <li>Mince the Garlic cloves and set aside seperate from the onions.</li>
+                <li>In a pan, add some oil and wait until the oil is warm.</li>
+                <li>Place the garlic in the pan and fry until garlic is slightly brown.</li>
+                <li>Add the onion and fry until onion is slightly brown.</li>
+                <li>Add the cold rice and stir fry until mixed well.</li>
+                <li>Carefully mix the fried eggs and corned beef into the rice.</li>
+                <li>Once they're well combined, place them in a bowl and enjoy!</li>
+
+            </ol>
+        </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll("*");
+        elements.forEach(element => {
+            element.style.transition = "opacity 2s";
+            element.style.opacity = 0;
+        });
+      
+        setTimeout(() => {
+            elements.forEach(element => {
+                element.style.opacity = 1;
+            });
+        }, 100);
+      });
+      </script>
+      
+
+    <footer>
+        <div class="x">
+    <p><a href="kusinella.html">Go back to the main page</a></p>
+        </div>    
+    </footer>
+
+
+</body>
+</html>
+
+

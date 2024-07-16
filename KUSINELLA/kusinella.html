@@ -18,16 +18,34 @@
     document.getElementById("searchForm").addEventListener("submit", function(event) {
       event.preventDefault(); 
       
-      let searchTerm = document.getElementById("searchInput").value;
+      let input = document.getElementById("searchInput").value;
       
-      switch(searchTerm.toLowerCase()) {
+      switch(input.toLowerCase()) {
         case "longsilog":
+          window.location.href = "kusinella_recipe_longsilog.html";
+          break;
+        case "tortang talong":
+          window.location.href = "kusinella_recipe.html";
+          break;
+        case "sinangag":
+          window.location.href = "kusinella_recipe_sinangag.html";
+          break;
+        case "sinigang":
+          window.location.href = "kusinella_recipe.html";
+          break;
+        case "adobong pusit":
+          window.location.href = "kusinella_recipe.html";
+          break;
+        case "inasal":
           window.location.href = "kusinella_recipe.html";
           break;
         case "champorado":
           window.location.href = "kusinella_recipe.html";
           break;
         case "mango graham":
+          window.location.href = "kusinella_recipe.html";
+          break;
+        case "fishball mix":
           window.location.href = "kusinella_recipe.html";
           break;
         default:
@@ -38,11 +56,28 @@
 
   <p> Breakfast </p>
 
+  <style>
+    .enlarge {
+        transform: scale(1.2); 
+        transition: transform 0.3s; 
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('img').hover(function(){
+            $(this).addClass('enlarge');
+        }, function(){
+            $(this).removeClass('enlarge');
+        });
+    });
+</script>
+
 
 <div class="row">
-    <a href="kusinella_recipe.html"><img src="img/Longsilog.png" alt="longsilog"></a>
+    <a href="kusinella_recipe_longsilog.html"><img src="img/Longsilog.png" alt="longsilog"></a>
     <a href="kusinella_recipe.html"><img src="img/torta.png" alt="Tortang Talong"></a>
-    <a href="kusinella_recipe.html"><img src="img/sinangag.png" alt="Fried Rice"></a>
+    <a href="kusinella_recipe_sinangag.html"><img src="img/sinangag_cornbeef.png" alt="Fried Rice"></a>
 </div>
     
 <p> Lunch/Dinner </p>
@@ -50,16 +85,32 @@
 <div class="row">
     <a href="kusinella_recipe.html"><img src="img/sinigang1.png" alt="Sinigang"></a>
     <a href="kusinella_recipe.html"><img src="img/Adobo.png" alt="Adobong Pusit"></a>
-    <a href="kusinella_recipe.html"><img src="img/inasal.png" alt="Image 1"></a>
+    <a href="kusinella_recipe.html"><img src="img/inasal.png" alt="Inasal"></a>
 </div>
 
 <p> Dessert/Snacks </p>
 
 <div class="row">
-    <a href="kusinella_recipe.html"><img src="img/mango-graham.png" alt="Image 1"></a>
-    <a href="kusinella_recipe.html"><img src="img/champorado.png" alt="Image 1"></a>
-    <a href="kusinella_recipe.html"><img src="img/balls.png" alt="Image 1"></a>
+    <a href="kusinella_recipe.html"><img src="img/mango-graham.png" alt="mango graham"></a>
+    <a href="kusinella_recipe.html"><img src="img/champorado.png" alt="champorado"></a>
+    <a href="kusinella_recipe.html"><img src="img/balls.png" alt="fishball mix"></a>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll("*");
+  elements.forEach(element => {
+      element.style.transition = "opacity 4s";
+      element.style.opacity = 0;
+  });
+
+  setTimeout(() => {
+      elements.forEach(element => {
+          element.style.opacity = 1;
+      });
+  }, 100);
+});
+</script>
 
 </body>
 

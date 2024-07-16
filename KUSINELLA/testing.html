@@ -30,17 +30,43 @@
 
 <div class="row">
     <div class="x">
-    <a href="breakfast.html"><img src="img/Longsilog.png" alt="breakfast"></a>
-    <p>Breakfast?</p>
+        <input type="radio" name="option" value="1">
+        <img src="img/Longsilog.png" alt="breakfast"></a>
+        <p>Breakfast?</p>
 
-    <a href="lunch.html"><img src="img/sinigang1.png" alt="Image 1"></a>
-    <p>Lunch/Dinner?</p>
+        <input type="radio" name="option" value="2">
+        <img src="img/sinigang1.png" alt="lunch/dinner"></a>
+        <p>Lunch/Dinner?</p>
 
-    <a href="dessert.html"><img src="img/mango-graham.png" alt="Image 1"></a>
-    <p>Dessert/Snack?</p>
+        <input type="radio" name="option" value="3">
+        <img src="img/mango-graham.png" alt="snacks/dessert"></a>
+        <p>Dessert/Snack?</p>
+
+        <button onclick="redirect()">Submit</button>
+
     </div>
-
+    
 </div>
+
+<script>
+    function redirect() {
+        let option = document.querySelector('input[name="option"]:checked').value;
+
+        switch(option) {
+            case '1':
+                window.location.href = 'breakfast.html';
+                break;
+            case '2':
+                window.location.href = 'lunch.html';
+                break;
+            case '3':
+                window.location.href = 'dessert.html';
+                break;
+            default:
+                alert('Please select an option.');
+        }
+    }
+</script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {

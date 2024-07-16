@@ -5,15 +5,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<h1> The Kusinella Food Assigner </h1>
-
-  <p>What Temperature would you like?</p>
-
+<h1>Desserts/Snacks</h1>
   <style>
     .enlarge {
-        transform: scale(1.2); /* Increase the size of the image */
-        transition: transform 0.3s; /* Add a smooth transition effect */
+        transform: scale(1.2); 
+        transition: transform 0.3s; 
     }
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -29,17 +25,43 @@
 
 <div class="row">
     <div class="x">
-    <a href="kusinella_recipe.html"><img src="img/mango-graham.png" alt="Image 1"></a>
-    <p>Cold?</p>
+        <input type="radio" name="option" value="1">
+        <img src="img/mango-graham.png" alt="Image 1"></a>
+        <p>Mango Graham</p>
 
-    <a href="kusinella_recipe.html"><img src="img/champorado.png" alt="Image 1"></a>
-    <p>Warm?</p>
+        <input type="radio" name="option" value="2">
+        <img src="img/champorado.png" alt="Image 1"></a>
+        <p>Champorado</p>
 
-    <a href="kusinella_recipe.html"><img src="img/balls.png" alt="Image 1"></a>
-    <p>Any/Neither?</p>
+        <input type="radio" name="option" value="3">
+        <img src="img/balls.png" alt="Image 1"></a>
+        <p>Fishball, Squidball and Kikiam</p>
+
+        <button onclick="redirect()">Submit</button>
+
     </div>
 
 </div>
+
+<script>
+    function redirect() {
+        let option = document.querySelector('input[name="option"]:checked').value;
+
+        switch(option) {
+            case '1':
+                window.location.href = 'kusinella_recipe_mangograham.html';
+                break;
+            case '2':
+                window.location.href = 'kusinella_recipe_champorado.html';
+                break;
+            case '3':
+                window.location.href = 'kusinella_recipe_fskball.html';
+                break;
+            default:
+                alert('Please select an option.');
+        }
+    }
+</script>
     
 <script>
     document.addEventListener("DOMContentLoaded", function() {

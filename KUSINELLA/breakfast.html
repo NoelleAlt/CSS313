@@ -6,14 +6,12 @@
 </head>
 <body>
 
-<h1> The Kusinella Food Assigner </h1>
-
-  <p>What flavor do you prefer?</p>
+<h1> Breakfast</h1>
 
   <style>
     .enlarge {
-        transform: scale(1.2); /* Increase the size of the image */
-        transition: transform 0.3s; /* Add a smooth transition effect */
+        transform: scale(1.2); 
+        transition: transform 0.3s; 
     }
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -30,17 +28,44 @@
 
 <div class="row">
     <div class="x">
-    <a href="kusinella_recipe.html"><img src="img/Longsilog.png" alt="longsilog"></a>
-    <p>Sweet?</p>
+        <input type="radio" name="option" value="1">
+        <img src="img/Longsilog.png" alt="longsilog"></a>
+        <p>Longsilog</p>
 
-    <a href="kusinella_recipe.html"><img src="img/torta.png" alt="tortang talong"></a>
-    <p>Salty?</p>
+        <input type="radio" name="option" value="2">
+        <img src="img/torta.png" alt="tortang talong"></a>
+        <p>Tortang Talong</p>
 
-    <a href="kusinella_recipe_sinangag.html"><img src="img/sinangag.png" alt="sinangag"></a>
-    <p>Mild?</p>
+        <input type="radio" name="option" value="3">
+        <img src="img/sinangag.png" alt="sinangag"></a>
+        <p>Sinangag</p>
+
+        <button onclick="redirect()">Submit</button>
+    
     </div>
 
 </div>
+
+<script>
+    function redirect() {
+        let option = document.querySelector('input[name="option"]:checked').value;
+
+        switch(option) {
+            case '1':
+                window.location.href = 'kusinella_recipe_longsilog.html';
+                break;
+            case '2':
+                window.location.href = 'kusinella_recipe_torta.html';
+                break;
+            case '3':
+                window.location.href = 'kusinella_recipe_sinangag.html';
+                break;
+            default:
+                alert('Please select an option.');
+        }
+    }
+</script>
+
 <script>
 
     document.addEventListener("DOMContentLoaded", function() {

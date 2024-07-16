@@ -83,7 +83,11 @@ button {
   text-align: center;
   font-size: 18px;
 }
-
+.x li {
+  padding: 10px 10px;
+  text-align: left;
+  font-size: 18px;
+}
 
 .row {
   display: -ms-flexbox; /* IE10 */
@@ -106,6 +110,29 @@ button {
     border-radius: 10px;
     border: 5px solid #ffac33;
 }
+
+
+.row img {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  border: 5px solid #ffac33;
+}
+
+.row button {
+  padding: 10px 20px;
+  background-color: #ffac33; 
+  color: black; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.row button:hover {
+  padding: 15px 25px;
+  background-color: #b77e27; 
+}
+
 
 @media screen and (max-width: 800px) {
   .row {

@@ -66,7 +66,7 @@
                 <li>5-7 Garlic cloves</li>
 
             </ul>
-
+            <button onclick="copyContent(this)"style= "user-select: none;" >Copy Text</button>
         </div>
         <div class="x">
             <h2>Instructions:</h2>
@@ -84,9 +84,26 @@
                 <li>Once they're well combined, place them in a bowl and enjoy!</li>
 
             </ol>
+
+            <button onclick="copyContent(this)" style= "user-select: none;" >Copy Text</button>
+
         </div>
         </div>
     </div>
+
+    <script>
+        function copyContent(button) {
+            var content = button.parentNode;
+            var range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            var contentType = content.querySelector('h2').innerText;
+        }
+    </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
         const elements = document.querySelectorAll("*");

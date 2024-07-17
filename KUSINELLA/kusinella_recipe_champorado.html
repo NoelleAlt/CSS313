@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kusinella's ___ Recipe</title>
+    <title>Kusinella's Champorado Recipe</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 <body>
 
     <header>
-        <h1> Kusinella's ___ Recipe</h1>
+        <h1> Kusinella's Champorado Recipe</h1>
     </header>
     
     <style>
@@ -28,9 +28,9 @@
     </script>
     
     <div class="row">
-        <a href="img/sinigang1.png"><img src="img/sinigang1.png" alt="Image 1"></a>
-        <a href="img/sinigang-na-baboy.png"><img src="img/sinigang-na-baboy.png" alt="Image 2"></a>
-        <a href="img/sinigang1.png"><img src="img/sinigang1.png" alt="Image 1"></a>
+        <a href="img/champorado.png"><img src="img/champorado.png" alt="Image 1"></a>
+        <a href="img/Champo.png"><img src="img/Champo.png" alt="Image 2"></a>
+        <a href="img/rado.png"><img src="img/rado.png" alt="Image 3"></a>
     </div>
 
 
@@ -56,36 +56,51 @@
         <div class="x">
             <h2>Ingredients:</h2>
             <ul>
-                <li>Ingredient 1</li>
-                <li>Ingredient 2</li>
-                <li>Ingredient 3</li>
-                <li>Ingredient 4</li>
-                <li>Ingredient 5</li>
-                <li>Ingredient 6</li>
-                <li>Ingredient 7</li>
-                <li>Ingredient 8</li>
-                <li>Ingredient 9</li>
+                <li>1 cup rice</li>
+                <li>1 pinch of salt</li>
+                <li>3 cans Coconut milk</li>
+                <li>Water</li>
+                <li>1/2 cup cocoa powder or 100-200g tablea</li>
 
             </ul>
+        
+            <button onclick="copyContent(this)"style= "user-select: none;">Copy Text</button>
 
         </div>
         <div class="x">
             <h2>Instructions:</h2>
             <ol>
-                <li>Step 1</li>
-                <li>Step 2</li>
-                <li>Step 3</li>
-                <li>Step 4</li>
-                <li>Step 5</li>
-                <li>Step 6</li>
-                <li>Step 7</li>
-                <li>Step 8</li>
-                <li>Step 9</li>
-
+                <li> Soak your rice in a bowl for at least 30 mins.</li>
+                <li>Mix 3 cans of coconut milk with 1/2 cup of water.</li>
+                <li>Pour 6 cups of the mix into a pot.</li>
+                <li>Bring it into a simmer.</li>
+                <li>Add the cocoa powder or tablea.</li>
+                <li>Stir until the chocolate is melted and evenly mixed.</li>
+                <li>Add the rice.</li>
+                <li>Add a pinch of salt and 1/2 cup of sugar.</li>
+                <li>Simmer until sticky rice is cooked throughout, about 30 mintues.</li>
+                <li>Serve and enjoy!</li>
             </ol>
+
+            <button onclick="copyContent(this)"style= "user-select: none;">Copy Text</button>
+
         </div>
         </div>
     </div>
+
+    <script>
+        function copyContent(button) {
+            var content = button.parentNode;
+            var range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            var contentType = content.querySelector('h2').innerText;
+        }
+    </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
         const elements = document.querySelectorAll("*");

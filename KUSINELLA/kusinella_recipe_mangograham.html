@@ -92,6 +92,20 @@
         </div>
 
     </div>
+
+    <script>
+        function copyContent(button) {
+            var content = button.parentNode;
+            var range = document.createRange();
+            range.selectNode(content);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            var contentType = content.querySelector('h2').innerText;
+        }
+    </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
         const elements = document.querySelectorAll("*");
